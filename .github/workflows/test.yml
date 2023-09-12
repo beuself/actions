@@ -13,7 +13,7 @@ on:
 
 jobs:
   Generate-Variable:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     outputs:
       git-short-sha: ${{ steps.git-short-sha.outputs.git-short-sha }}
     steps:
