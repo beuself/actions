@@ -4,6 +4,7 @@ env:
   BRANCH_NAME: ${{ github.ref_name }}
   IMAGE_REGISTRY_NON: 455433697805.dkr.ecr.cn-northwest-1.amazonaws.com.cn
   IMAGE_REGISTRY_PRD: 453484303633.dkr.ecr.cn-northwest-1.amazonaws.com.cn
+  IMAGE_REGISTRY_MAIN: 453484303633.dkr.ecr.cn-northwest-1.amazonaws.com.cn
 
 on:
   workflow_dispatch:
