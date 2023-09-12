@@ -25,5 +25,6 @@ jobs:
         run: |
           echo "git-short-sha=${COMMIT_SHA::8}" >> "$GITHUB_OUTPUT"
           registry="IMAGE_REGISTRY_${BRANCH_NAME^^}"
-          echo "image-registry=${{ env[registry] }}" >> "$GITHUB_OUTPUT"
+          image-registry=${{ env[${registry}] }}
+          echo "image-registry=${image-registry}" >> "$GITHUB_OUTPUT"
           cat "$GITHUB_OUTPUT"
