@@ -1,0 +1,16 @@
+name: GitHub Actions CI
+run-name: ${{ github.actor }} is executing GitHub Actions 🚀
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  dns-query:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dig
+        run: sudo apt-get update && sudo apt-get install -y dnsutils
+
+      - name: Run DNS query with dig
+        run: |
+          dig @114.114.114.114 nvwa-images.test.commerce.nike.com.cn.w.kunluncan.com +trace
